@@ -1,0 +1,87 @@
+/* Stanford Logo Font and Wordmark Style - Taken from Stanford Website */
+@font-face {font-family:Stanford; src:url(https://www.stanford.edu/wp-content/themes/homesite17/fonts/Stanford.ttf?a9awv8) format("truetype"),
+    url(https://www.stanford.edu/wp-content/themes/homesite17/fonts/Stanford.woff?a9awv8) format("woff"),
+    url(https://www.stanford.edu/wp-content/themes/homesite17/fonts/Stanford.svg?a9awv8#Stanford) format("svg");}
+
+.su-brand {font-family:Stanford,"Source Serif Pro",Georgia,Times,"Times New Roman",serif!important; font-style:normal; font-weight:400; font-variant:normal;
+text-transform:none; line-height:1; -webkit-transform:translateZ(0); transform:translateZ(0); font-size-adjust:.65;
+letter-spacing:0; -webkit-font-feature-settings:"liga"; -ms-font-feature-settings:"liga" 1; font-feature-settings:"liga";
+-webkit-font-variant-ligatures: discretionary-ligatures; font-variant-ligatures: discretionary-ligatures; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; text-decoration:none;}
+
+/* Base */
+html,body,h1,h2,p,ul,li,div,img,a {padding:0; margin:0; border:0;}
+body {font-family:"Source Sans Pro",sans-serif; font-size:18px; background:#fbfbf9;}
+header,aside,main,footer {box-sizing:border-box;}
+
+/* Skip Links */
+.skip-link {position:absolute; top:0; z-index:9999; right:100%; padding:6px; padding:.5rem; font-size:20px; font-size:2rem; color:#000; background:#fff;}
+.skip-link:focus {right:auto;}
+
+/* CSS Grid */
+.main-grid {display:grid; grid-template-columns:1fr 3fr; grid-template-rows:30px auto 1fr auto; min-height:100vh;}
+
+/* Red Brand Bar */
+#brand-bar {grid-column:1/span 2; background:#8c1515; padding:6px 12px 0;}
+#wordmark {color:#fff; font-size:1.1em;}
+
+/* Header with Title and Tagline */
+header {grid-column:1/span 2; background:#f8f7f2; border-bottom:1px solid #e9e6df; padding:30px 12px;}
+.site-title {font-size:3em; font-weight:300; line-height:1;}
+.site-title a {color:#000; text-decoration:none;}
+.tagline {font-size:1.3em; font-weight:300; font-style:italic; line-height:1.1; margin-top:4px;}
+
+/* Left Sidebar */
+aside {grid-column:1/span 1; grid-row:3/span 1; padding:30px 12px;}
+aside h2 {line-height:1.1; font-weight:300; margin-top:6px;}
+
+/* Main Content */
+main {grid-column:2/span 1; grid-row:3/span 1; padding:30px 12px;}
+main h1 {line-height:1.1; margin:0 0 20px; font-size:2.2em; font-weight:300;}
+img {max-width:900px; width:100%;}
+
+/* Global Footer */
+footer {grid-column:1/span 2; background:#8c1515; padding:30px 12px; color:#fff;}
+
+.footer-content {display:grid; grid-template-columns:170px 1fr;}
+
+#footer-logo {grid-column:1/span 1; grid-row:1/span 2;}
+#footer-logo a {font-size:1.9em; color:#fff; line-height:.75; width:120px; display:inline-block; margin:0 auto; text-align:center;}
+
+#footer-nav {grid-column:2/span 1; grid-row:1/span 1;}
+#footer-nav ul {margin-bottom:.3em;}
+#footer-nav ul li {display:inline-block;}
+#footer-nav ul li a {margin-right:1em; color:#fff; text-decoration:none;}
+#footer-nav ul li a:hover {text-decoration:underline;}
+
+footer p {grid-column:2/span 1; grid-row:2/span 1;}
+#policy-links, footer p {font-size:.9em; font-weight:300;}
+
+/* Small Devices */
+@media only screen and (max-width:767px) {
+	/* Main Site CSS Grid */
+    .main-grid {grid-template-columns:1fr; grid-template-rows:30px auto 1fr auto auto;}
+    #brand-bar, header, aside, main, footer {grid-column:1/span 1;}
+    .brand-bar-bg, .header-bg, .main-bg, .footer-bg {display:none;}
+    aside {grid-row:4/span 1;}
+    main {grid-row:3/span 1;}
+
+	/* Font Sizes */
+    .site-title {font-size:2.4em;}
+    .tagline {font-size:1.1em;}
+    main h1 {font-size:1.6em;}
+	aside h2 {font-size:1.3em;}
+	footer {font-size:.89em;}
+
+    /* Footer Grid */
+    .footer-content {grid-template-columns:1fr; grid-gap:15px;}
+    #footer-logo, #footer-nav, #copyright {grid-column:1/span 1;}
+    #footer-logo {grid-row:1/span 1;}
+    #footer-nav {grid-row:2/span 1; max-width:320px; margin:0 auto;} 
+    #copyright {grid-row:3/span 1; text-align:center;}
+
+    #footer-logo a {display:block; font-size:2em;}
+
+    #footer-nav ul {float:left; width:calc(50% - 30px); margin-left:20px; font-weight:400; font-size:.94em; overflow:hidden;}
+    #footer-nav ul li {padding:.46em 0;}
+    #footer-nav ul li a {display:block;}
+}
