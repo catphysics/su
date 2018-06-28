@@ -6,6 +6,6 @@ index.html is a more realistic layout with a maximum width (1200px) for the main
 Demo: https://siliconian.com/su
 
 ## Simplified Layout
-index-simple.html is a simplied layout with no consideration for maximum width for the main area
+index-simple.html is a simplified layout with no consideration for maximum width for the main area
 
 Demo: https://siliconian.com/su/index-simple.html
